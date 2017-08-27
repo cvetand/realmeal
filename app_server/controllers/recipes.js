@@ -1,6 +1,6 @@
 var request = require('request');
 var apiOptions = {
-  server: process.env.APP_URL
+  server: process.env.APP_URL + ':' + process.env.PORT
 }
 module.exports.recipelist = function(req, res) {
   var requestOptions;
