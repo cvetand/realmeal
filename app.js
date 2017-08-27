@@ -52,6 +52,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(8080, function () {
+app.listen(process.env.PORT || 8080, function () {
   console.log('App listening on port 8080!')
 })
