@@ -60,8 +60,9 @@ var getRecipeInfo = function(req, res, callback) {
   request(
     requestOptions,
     function(err, response, body) {
+      console.log(body)
       if (response.statusCode === 200) {
-        callback(req, res, body.data);
+        callback(req, res, body);
       } else {
         _showError(req, res, response.statusCode);
       }
